@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Fantasy Team Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>IPL Fantasy Team Predictor</h1>
+        <form method="POST" action="/predict">
+            <label for="team1">Team 1:</label>
+            <input type="text" id="team1" name="team1" required placeholder="e.g., Sunrisers Hyderabad"><br>
+
+            <label for="team2">Team 2:</label>
+            <input type="text" id="team2" name="team2" required placeholder="e.g., Lucknow Super Giants"><br>
+
+            <label for="venue">Venue:</label>
+            <input type="text" id="venue" name="venue" required placeholder="e.g., Rajiv Gandhi International Stadium"><br>
+
+            <label for="batting_choice">Which team is batting first?</label>
+            <select id="batting_choice" name="batting_choice" required>
+                <option value="1">Team 1</option>
+                <option value="2">Team 2</option>
+            </select><br>
+
+            <label for="team1_players">Team 1 Playing 11 (comma-separated):</label>
+            <textarea id="team1_players" name="team1_players" required placeholder="e.g., Abhishek Sharma, TM Head, Ishan Kishan"></textarea><br>
+
+            <label for="team2_players">Team 2 Playing 11 (comma-separated):</label>
+            <textarea id="team2_players" name="team2_players" required placeholder="e.g., AK Markram, RR Pant, N Pooran"></textarea>
+            <br> <button type="submit">Predict Team</button>
+
+    
+        </form>
+    </body>
+    </html>

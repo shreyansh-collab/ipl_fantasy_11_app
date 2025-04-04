@@ -1,0 +1,107 @@
+/* Reset default styles and set the font and background for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+/* Style the container that holds the form and table */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+/* Style the main heading */
+h1 {
+    text-align: center;
+    color: #333;
+}
+/* Style the form to stack elements vertically */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style form labels */
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Style input fields, dropdowns, and textareas */
+input, select, textarea {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style textareas specifically */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Style the submit button */
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Add hover effect for the button */
+button:hover {
+    background-color: #0056b3;
+}
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style table headers and cells */
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style table headers specifically */
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Add alternating row colors for better readability */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* Style error messages */
+.error {
+    color: red;
+    font-weight: bold;
+}
+/* Style links */
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Add hover effect for links */
+a:hover {
+    text-decoration: underline;
+}

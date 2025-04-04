@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Fantasy Team</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predicted Fantasy Team for {{ team1 }} vs {{ team2 }} at {{ venue }}</h1>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% else %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Role</th>
+                        <th>Team</th>
+                        <th>Predicted Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player in team %}
+                        <tr>
+                            <td>{{ player.player }}</td>
+                            <td>{{ player.role }}</td>
+                            <td>{{ player.team }}</td>
+                            <td>{{ player.predicted_points | round(2) }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <p><strong>Captain:</strong> {{ captain }} (2x points)</p>
+            <p><strong>Vice-Captain:</strong> {{ vice_captain }} (1.5x points)</p>
+        {% endif %}
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
+</div>
+</body>
+</html>
